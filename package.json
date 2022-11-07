@@ -1,0 +1,34 @@
+{
+  "name": "browserify",
+  "version": "1.0.0",
+  "description": "Browserify, Learning browserify module bundler",
+  "scripts": {
+    "dev": "npm run clean && npm run bundle && npm run watch",
+    "build": "npm run clean && npm run bundle && npm run map",
+    "bundle": "browserify ./src/js/script.js -o ./dist/js/bundle.js",
+    "watch": "watchify ./src/js/script.js -o ./dist/js/bundle.js",
+    "map": "browserify ./src/js/script.js --debug | exorcist ./dist/js/bundle.js.map > ./dist/js/bundle.js",
+    "clean": "rimraf ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/James-alderson/Browserify-Learning.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "js",
+    "browserify"
+  ],
+  "author": "James Alderson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/James-alderson/Browserify-Learning/issues"
+  },
+  "homepage": "https://github.com/James-alderson/Browserify-Learning#readme",
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "exorcist": "^2.0.0",
+    "watchify": "^4.0.0"
+  }
+}
